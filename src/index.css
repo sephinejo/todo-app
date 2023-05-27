@@ -1,3 +1,19 @@
+:root {
+  --color-bg-dark: #e26868;
+  --color-beige: #ffead2;
+  --color-accent: #fff3e2;
+  --color-peach: #ff8787;
+  --color-white: #fff;
+}
+
+html.dark {
+  --color-bg-dark: #212a3e;
+  --color-beige: #9ba4b5;
+  --color-accent: #abc9ff;
+  --color-peach: #abc9ff;
+  --color-white: #000;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +21,62 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  accent-color: var(--color-peach);
+  background: rgb(179, 172, 172);
+  background: linear-gradient(
+    138deg,
+    rgba(179, 172, 172, 0.8603816526610644) 35%,
+    rgba(205, 178, 107, 1) 78%,
+    rgba(233, 185, 40, 0.6446953781512605) 100%
+  );
+}
+
+#root {
+  width: 100%;
+  height: 60%;
+  max-width: 500px;
+  background-color: var(--color-bg);
+  overflow: hidden;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-shadow: 11px 12px 13px -3px rgba(122, 109, 122, 0.73);
+  -moz-box-shadow: 11px 12px 13px -3px rgba(122, 109, 122, 0.73);
+  box-shadow: 11px 12px 13px -3px rgba(122, 109, 122, 0.73);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fea1a1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-peach);
 }
